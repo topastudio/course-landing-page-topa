@@ -75,9 +75,9 @@ function Nav() {
         </div>
         <ul className="nav-links">
           <li><a href="#hero">בית</a></li>
-          <li><a href="#about">הסטודיו</a></li>
-          <li><a href="#compare">השוואה</a></li>
-          <li><a href="#reviews">בוגרות</a></li>
+          <li><a href="#about">אודות</a></li>
+          <li><a href="#compare">הסטודיו</a></li>
+          <li><a href="#reviews">בוגרים</a></li>
           <li><a href="#enroll">הרשמה</a></li>
         </ul>
         <a href="#enroll" className="nav-cta">
@@ -106,7 +106,7 @@ function Hero() {
       <div className="hero-inner">
         <div className={`hero-kicker ${mounted ? "in" : ""}`}>
           <span className="hairline" />
-          <span>אקדמיית הקעקועים של טופה</span>
+          <span>TOPAcademy</span>
           <span className="hairline" />
         </div>
 
@@ -118,7 +118,7 @@ function Hero() {
               <path d="M2 28 C 40 8, 90 8, 130 22 S 190 32, 198 18" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
             </svg>
           </span>
-          <span className={`line small ${mounted ? "in" : ""}`} style={{ transitionDelay: "360ms" }}>אחת על אחת. מהיסוד.</span>
+          <span className={`line small ${mounted ? "in" : ""}`} style={{ transitionDelay: "360ms" }}>אחד על אחד. לאורך כל הדרך</span>
         </h1>
 
         <p className={`hero-lede ${mounted ? "in" : ""}`} style={{ transitionDelay: "480ms" }}>
@@ -170,8 +170,10 @@ function Divider() { return <span className="meta-divider" aria-hidden />; }
 // ---------- Marquee ----------
 function Marquee() {
   const items = [
-    "Fine Line", "Black & Grey", "Botanical", "Ornamental", "Lettering",
-    "Micro Realism", "Color Theory", "Skin Studies", "Studio Practice", "Business",
+    "פיין ליין", "הצללות", "בוטניקה", "ריאליזם", "פרי הנד",
+    "יצירת סקיצה", "תורת הצבע", "פיגמנטים", "ציוד", "סטריליזציה",
+    "זיהומי גוף", "דרמטולוגיה", "מיתוג", "שיווק", "בידול עסקי",
+    "סגירת לקוחות", "שימור לקוחות", "ניהול יומן", "ניהול והקמת עסק",
   ];
   return (
     <div className="marquee" aria-hidden>
@@ -211,7 +213,7 @@ function About() {
                 <text x="140" y="180" textAnchor="middle" fontFamily="ui-monospace, Menlo, monospace" fontSize="11" letterSpacing="2" fill="currentColor" opacity="0.55">— PORTRAIT —</text>
                 <text x="140" y="198" textAnchor="middle" fontFamily="ui-monospace, Menlo, monospace" fontSize="9" letterSpacing="1" fill="currentColor" opacity="0.4">TOPA · 4×5</text>
               </svg>
-              <div className="portrait-tag">טופה דניאל · מייסדת ומורה ראשית</div>
+              <div className="portrait-tag">טופה · בעלת הסטודיו ומדריכת הקורס</div>
             </div>
           </div>
         </aside>
@@ -224,21 +226,37 @@ function About() {
 
           <div className={`about-lede ${visible ? "in" : ""}`}>
             <p>
-              לפני שמונה שנים פתחתי את טופה כי לא היה לי איפה ללמוד את זה כמו שצריך.
-              לא רציתי לראות עוד מצגת, לא רציתי להעתיק שבלונה. רציתי לשבת מול בנאדם,
-              להבין למה הוא בא, ולעקוב במחט שלי על העור שלו — לאט, ביחד, בכבוד.
+              כשאני התחלתי ללמוד לקעקע, עשיתי את מה שהרבה עושים בתחילת הדרך — בחרתי
+              קורס מתוך התלהבות רגעית באינסטגרם, בלי באמת לבדוק לעומק, בלי להכיר את
+              הסטודיו ובלי להבין מה נכון עבורי.
             </p>
             <p>
-              היום, אחרי שלוש מאות לקוחות וארבעה מחזורים, אני מלמדת את הקורס שאני
-              עצמי הייתי רוצה לקחת. לא בקבוצה של עשרים, לא בזום, לא בקיצורי דרך.
-              שש תלמידות, ארבעה חודשים, סטודיו פעיל — והרבה תה.
+              נכנסתי לקורס קבוצתי עם מעל 10 תלמידות, ומהר מאוד הבנתי שלכל אחת יש קצב
+              אחר. היו כאלה שהתקדמו מהר, ואני מצאתי את עצמי מנסה לעמוד בקצב במקום באמת
+              ללמוד ולהרגיש בטוחה.
+            </p>
+            <p>
+              בדיעבד הבנתי שיצאתי מהקורס עם הרבה חוסר, ואת רוב הידע שלי צברתי דווקא אחרי —
+              דרך עבודה בשטח, טעויות, ניסיונות, עליות ומורדות.
+            </p>
+            <p>
+              אבל דווקא הדרך הזאת לימדה אותי הכי הרבה, ובעיקר גרמה לי להבין בדיוק איך אני
+              רוצה שהקורס שלי ייראה.
+            </p>
+            <p>
+              היום אני מלמדת בשיטת 1:1, כי אני מאמינה שכל תלמיד/ה מגיעים מנקודת פתיחה
+              אחרת ולכל אחד דרך למידה שונה. הקורס שלי בנוי סביב התלמיד — לא להפך.
+            </p>
+            <p>
+              המטרה שלי היא לא רק ללמד לקעקע, אלא לתת בסיס אמיתי, ביטחון, ליווי אישי וכלים
+              שילוו אותך הרבה אחרי שהקורס יסתיים.
             </p>
           </div>
 
           <div className="about-pillars">
-            <Pillar i="01" title="אינטימי" body="שש מקומות בלבד בכל מחזור. כי ככה לומדים." delay={0} visible={visible} />
-            <Pillar i="02" title="מעשי" body="מהשבוע הראשון יד על מכונה. רוב השיעור — תרגול." delay={120} visible={visible} />
-            <Pillar i="03" title="שלם" body="טכניקה, סגנון, היגיינה, ועסק. הכול במקום אחד." delay={240} visible={visible} />
+            <Pillar i="01" title="אינטימי" body="שיעורים פרטיים, אחד על אחד." delay={0} visible={visible} />
+            <Pillar i="02" title="ליווי" body="במהלך הקורס וגם אחריו, טופה תמיד נשאר הבית שלכם." delay={120} visible={visible} />
+            <Pillar i="03" title="מעטפת" body="ספקים וציוד, שיווק, לקוחות וניהול עסקי, תחת קורס אחד." delay={240} visible={visible} />
           </div>
 
           <a href="#compare" className={`about-link ${visible ? "in" : ""}`}>
@@ -265,33 +283,33 @@ function Pillar({ i, title, body, delay, visible }) {
 const COMPARE_ROWS = [
   {
     label: "פורמט הלימוד",
-    us: "אחת על אחת. שש בנות, מורה אחת, סטודיו אחד.",
-    them: "כיתה של 20–30, לעיתים בזום או מוקלט מראש.",
+    us: "קורס פרטי אחד על אחד, רק את/ה והמורה.",
+    them: "לימוד בקבוצה גדולה.",
   },
   {
     label: "סילבוס",
-    us: "מותאם אישית. בודקות יחד מה את כבר יודעת ומאיפה מתחילות.",
-    them: "סילבוס קבוע וצפוף. כולן עוברות את אותו דבר באותו קצב.",
+    us: "סילבוס מותאם אישית, בקצב הלמידה לפי מה שמתאים לך.",
+    them: "סילבוס גנרי שמתאים לכולם, לומדות בקבוצה.",
   },
   {
     label: "ליווי בין השיעורים",
-    us: "וואטסאפ פתוח, פידבק על כל שרטוט, סקייפ שבועי במידת הצורך.",
-    them: "פגישה בכיתה, ולהתראות עד הפעם הבאה.",
+    us: "ליווי במהלך הקורס וגם ביום שאחרי — וכל החיים.",
+    them: "ליווי במהלך הקורס בלבד.",
   },
   {
     label: "תרגול על עור",
-    us: "כבר מהשבוע הרביעי, בלייב, על מתנדבים אמיתיים בסטודיו.",
-    them: "בעיקר על סיליקון. לעיתים פעם או פעמיים על עור עד הסוף.",
+    us: "לכל תלמיד/ה יש מקום לעבוד כמקעקע/ת בטופה לאחר סיום הקורס.",
+    them: "רק מבוגרי הקורס יקבלו אופציה לעבוד בסטודיו.",
   },
   {
-    label: "בנייה של תיק עבודות",
-    us: "מלוות אותך בבחירת סגנון אישי, בצילום ובעריכה.",
-    them: "תיק כללי. את לבד עם הסגנון שלך.",
+    label: "תוכן הקורס",
+    us: "תוכן בסושיאל, פיינאנס, שיווק, אמנות וסגנונות ציור.",
+    them: "לימודי בסיס + הבטחות גדולות.",
   },
   {
-    label: "אחרי הקורס",
+    label: "ייחודי לטופה",
     us: "המקום היחיד בארץ שמציע מקום בסטודיו לבוגרות מצטיינות.",
-    them: "תעודה ביד, ובהצלחה.",
+    them: "—",
   },
 ];
 
@@ -310,7 +328,7 @@ function Compare() {
         </h2>
         <p className={`compare-lede ${visible ? "in" : ""}`}>
           חיפשנו את ההבדלים האמיתיים, לא את אלה שנשמעים יפה במודעה.
-          הנה מה שאנחנו עושות אחרת — שורה אחר שורה.
+          הנה מה שעושים אחרת בטופה — שאין במקומות אחרים.
         </p>
       </div>
 
@@ -319,12 +337,12 @@ function Compare() {
           <div className="compare-col-label" />
           <div className="compare-col-us">
             <div className="col-tag col-tag-us">אנחנו</div>
-            <div className="col-name"><em>סטודיו טופה</em></div>
+            <div className="col-name"><em>קורס מקעקועים בסטודיו טופה</em></div>
             <div className="col-sub">בוטיק · 6 תלמידות</div>
           </div>
           <div className="compare-col-them">
             <div className="col-tag col-tag-them">אחרים</div>
-            <div className="col-name">סטודיו רגיל</div>
+            <div className="col-name">קורס מקעקועים בכל סטודיו אחר</div>
             <div className="col-sub">קבוצה גדולה · סילבוס קבוע</div>
           </div>
         </div>
@@ -338,7 +356,7 @@ function Compare() {
             <span>אני רוצה להיפגש</span>
             <span className="btn-arrow">←</span>
           </a>
-          <span className="compare-foot-note">פגישת היכרות, ללא התחייבות. תה על חשבוננו.</span>
+          <span className="compare-foot-note">פגישת ייעוץ היכרות, ללא התחייבות.</span>
         </div>
       </div>
     </section>
@@ -484,30 +502,13 @@ function Reviews() {
           <span>פרק 03 — בוגרות מספרות</span>
         </div>
         <h2 className={`section-title center ${visible ? "in" : ""}`}>
-          הקול<br />
-          <em>של הבנות.</em>
+          בוגרים<br />
+          <em>של טופה.</em>
         </h2>
         <p className={`rv-lede ${visible ? "in" : ""}`}>
-          שמונה ציטוטים, שמונה בוגרות, סטודיו אחד שנשאר להן בלב.
-          גללי ימינה ושמאלה — כל אחת מספרת אחרת.
+          הדבר הכי חשוב בקורס הזה הוא האנשים שיוצאים ממנו.
+          הנה מה שיש לתלמידים שלנו להגיד.
         </p>
-      </div>
-
-      <div className="rv-stats">
-        <div className={`rv-stat ${visible ? "in" : ""}`} style={{ transitionDelay: "100ms" }}>
-          <span className="rv-stat-n">4.9</span>
-          <span className="rv-stat-l">דירוג ממוצע</span>
-        </div>
-        <span className="rv-stat-rule" />
-        <div className={`rv-stat ${visible ? "in" : ""}`} style={{ transitionDelay: "180ms" }}>
-          <span className="rv-stat-n">№ 124</span>
-          <span className="rv-stat-l">ביקורות</span>
-        </div>
-        <span className="rv-stat-rule" />
-        <div className={`rv-stat ${visible ? "in" : ""}`} style={{ transitionDelay: "260ms" }}>
-          <span className="rv-stat-n">98%</span>
-          <span className="rv-stat-l">ממליצות</span>
-        </div>
       </div>
 
       <div className={`rv-rail ${visible ? "in" : ""}`}>
